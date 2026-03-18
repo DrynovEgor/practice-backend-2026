@@ -1,0 +1,82 @@
+:root {
+    --mainColor: rgb(113, 124, 223);
+
+    --bg1: rgb(219, 219, 219);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    padding: 5px 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 0 black;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.app {
+    min-height: 100vh;
+}
+
+.register-page {
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-form {
+    padding: 15px 45px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 black;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.submit-btn {
+    padding: 10px;
+    background: var(--mainColor);
+
+    font-weight: bold;
+}
+
+.main-page, .history-page, .search-page, .checkIn-page {
+   margin-top: 49px;
+}
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.room-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.room {
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+
+    display: flex;
+    flex-direction: column;
+}

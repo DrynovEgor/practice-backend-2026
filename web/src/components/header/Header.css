@@ -1,0 +1,53 @@
+.Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    padding: 10px;
+    box-shadow: 0 0 10px 0 black;
+    border-radius: 10px;
+    background: white;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.Header-route-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.Header-btn {
+    position: relative;
+
+    background: transparent;
+    border: none;
+}
+.Header-btn::before {
+    content: "";
+    
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+
+    height: 2px;
+    background: #000;
+    transition: 0.3s;
+}
+.Header-btn:hover::before {
+    left: 35%;
+    right: 35%;
+}
+
+.Hedaer-active-btn::before {
+    background: var(--mainColor);
+
+    left: 35%;
+    right: 35%;
+}

@@ -1,0 +1,21 @@
+.InputField {
+    padding: 10px;
+    background: var(--bg1);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.InputField span {
+    font-weight: bold;
+}
+
+.InputField input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+
+    font-size: 18px;
+}

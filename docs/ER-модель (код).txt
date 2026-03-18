@@ -1,0 +1,45 @@
+Table goests {
+  id integer [primary key]
+  fi varchar
+  date_of_birth date
+  gender varchar
+  citizenship varchar
+  passport int
+  phone bigint
+}
+
+Table booking_status {
+  id int [primary key]
+  status_name varchar
+  description varchar
+}
+
+Table booking {
+  id int [primary key]
+  guest_id int 
+  room_id int
+  check_in_date date
+  check_out_date date
+  booking_date datetime
+  status_id int
+  total_price int 
+}
+
+Table room_status {
+  id int [primary key]
+  status_name varchar
+  description varchar
+}
+
+Table rooms {
+  id int [primary key]
+  room_number varchar
+  status int
+  price int
+}
+
+
+Ref: "booking"."guest_id" < "goests"."id"
+Ref: "booking"."room_id" < "rooms"."id"
+Ref: "booking"."status_id" < "booking_status"."id"
+Ref: "rooms"."status" < "room_status"."id"
