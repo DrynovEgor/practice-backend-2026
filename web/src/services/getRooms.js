@@ -1,4 +1,4 @@
-export const getRooms = () => fetch("http://localhost:3001/getrooms")
+export const getRooms = () => fetch("http://localhost:3001/rooms")
     .then(res => res.json())
     .then(data => {
         return data

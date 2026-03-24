@@ -1,0 +1,25 @@
+server/
+│
+├── app.js
+│
+├── db/
+│   └── connect.js
+│
+├── routes/           👈 только роуты
+│   ├── rooms.js
+│   └── guests.js
+│
+├── controllers/      👈 логика обработки
+│   ├── roomsController.js
+│   └── guestsController.js
+│
+└── services/         👈 работа с БД
+    ├── roomsService.js
+    └── guestsService.js
+
+get() <- получить данные
+post() <- создать
+put() <- полностью заменить
+patch() <- частично изменить
+delete() <- удалить
+
