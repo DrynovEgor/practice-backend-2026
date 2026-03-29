@@ -7,7 +7,7 @@ export const guestRegister = async (form) => {
         if (result.length != 0) return {status: true}; 
 
         [result] = await db.execute(`
-            INSERT INTO guests (fi, date_of_birth, gender, citizenship, passport, phone) 
+            INSERT INTO guests (fi, date_of_birth, gender, citizenship, passport, phone, roleId, password) 
             VALUES (?, ?, ?, ?, ?, ?)`,
             [
                 form.fi,
@@ -15,7 +15,9 @@ export const guestRegister = async (form) => {
                 form.gender,
                 form.citizenship,
                 parseInt(form.passport),
-                parseInt(form.phone)
+                parseInt(form.phone),
+                2,
+                form.password
             ]
         );
 

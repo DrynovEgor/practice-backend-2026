@@ -16,13 +16,13 @@ export function MainPage() {
         <div className="main-page">
             <h1>Главная</h1>
             <div className="room-container">
-            {allRooms.map((room) => (
+            {/* {allRooms.map((room) => (
                 <div key={room.room_number} className="room">
                     <span>Номер: {room.room_number}</span>
                     <span>Статус: {room.status}</span>
                     <span>{room.price}₽</span>
                 </div>
-            ))}    
+            ))}     */}
             </div>
             
         </div>

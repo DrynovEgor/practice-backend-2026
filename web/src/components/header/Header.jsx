@@ -1,6 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import "./Header.css";
-import { testServer } from "../../services/testServer";
 
 export function Header() {
     const location = useLocation();
@@ -8,33 +7,22 @@ export function Header() {
 
     return (
         <header className="Header">
-            <div className="route-container-Header">
-                <button 
-                    className={`Header-btn ${location.pathname == "/" ? "Hedaer-active-btn" : ""}`}
-                    onClick={() => navigate("/")}
-                >Главная</button>
-                <button 
-                    className={`Header-btn ${location.pathname == "/register" ? "Hedaer-active-btn" : ""}`}
-                    onClick={() => navigate("/register")}
-                >Регистрация</button>
-                <button 
-                    className={`Header-btn ${location.pathname == "/checkIn" ? "Hedaer-active-btn" : ""}`}
-                    onClick={() => navigate("/checkIn")}
-                >Заселение</button>
-                <button 
-                    className={`Header-btn ${location.pathname == "/history" ? "Hedaer-active-btn" : ""}`}
-                    onClick={() => navigate("/history")}
-                >История</button>
-                <button 
-                    className={`Header-btn ${location.pathname == "/search" ? "Hedaer-active-btn" : ""}`}
-                    onClick={() => navigate("/search")}
-                >Поиск</button>
-            </div>
-            
             <button 
-                // style={{marginLeft: "auto"}}
-                onClick={() => testServer()}
-            >Проверить сервер</button>
+                className={`Header-btn ${location.pathname == "/" ? "Hedaer-active-btn" : ""}`}
+                onClick={() => navigate("/")}
+            >Главная</button>
+            <button 
+                className={`Header-btn ${location.pathname == "/register" ? "Hedaer-active-btn" : ""}`}
+                onClick={() => navigate("/register")}
+            >Регистрация</button>
+            <button 
+                className={`Header-btn ${location.pathname == "/reservation" ? "Hedaer-active-btn" : ""}`}
+                onClick={() => navigate("/reservation")}
+            >Бронь</button>
+            <button 
+                className={`Header-btn ${location.pathname == "/auto" ? "Hedaer-active-btn" : ""}`}
+                onClick={() => navigate("/auto")}
+            >Вход в личный кабинет</button>
         </header>
     );
 };

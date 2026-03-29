@@ -5,5 +5,6 @@ const router = express.Router();
 
 router.get("/", getRooms);
 router.patch("/:id/status", updateStatus)
+router.delete("/:id/delete")
 
 export default router;

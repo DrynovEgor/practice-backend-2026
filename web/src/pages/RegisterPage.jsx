@@ -11,6 +11,7 @@ export function RegisterPage() {
         citizenship: "",
         passport: "",
         phone: 0,
+        password: "",
     })
 
     return (
@@ -69,6 +70,15 @@ export function RegisterPage() {
                     value={(value) => setForm({
                         ...form,
                         phone: value.target.value
+                    })}
+                ></InputField>
+
+                <InputField
+                    text="Пароль"
+                    id="password"
+                    value={(value) => setForm({
+                        ...form,
+                        password: value.target.value
                     })}
                 ></InputField>
 

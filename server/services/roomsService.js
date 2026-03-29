@@ -37,3 +37,21 @@ export const updateRoomStatus = async (roomId, statusId) => {
         return {status: false}
     }
 };
+
+export const deleteRoom = async (roomId) => {
+    try {
+        const [result] = await db.execute(
+            "DELETE FROM rooms WHERE id = ?", 
+            [roomId]
+        );
+
+        if (result.affectedRows ==0) {
+            return {status: false, message: "Комната не найдена"}
+        };
+
+        return {status: true}
+    } catch (err) {
+        console.log(err);
+        return  {status: false}
+    }
+}
