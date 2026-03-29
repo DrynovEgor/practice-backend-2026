@@ -3,6 +3,7 @@ import cors from "cors";
 
 import roomsRouter from "./routes/rooms.js";
 import guestsRouter from "./routes/guest.js";
+import bookingRouter from "./routes/booking.js"
 
 const app = express();
 const PORT = 3001;
@@ -15,6 +16,8 @@ app.use("/test", (req, res) => {
 app.use("/rooms", roomsRouter);
 
 app.use("/guests", guestsRouter)
+
+app.use("/booking", bookingRouter)
 
 app.listen(PORT, () => {
     console.log(`Server started on http://localhost:${PORT}`);

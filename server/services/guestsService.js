@@ -8,7 +8,7 @@ export const guestRegister = async (form) => {
 
         [result] = await db.execute(`
             INSERT INTO guests (fi, date_of_birth, gender, citizenship, passport, phone, roleId, password) 
-            VALUES (?, ?, ?, ?, ?, ?)`,
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
             [
                 form.fi,
                 form.dateOfBirth, 
